@@ -1,0 +1,46 @@
+
+
+
+Port 80 and 22 are open
+
+
+
+There is a cat contest which displays the pictures you can vote on
+
+
+
+
+After authenticating to the web app there is an endpoint that stands out to me. 
+
+
+contest.php. 
+
+
+This takes a png image. I notice in the request it actually Loads the content of the png image into the request
+
+
+could be this
+
+https://community.f5.com/kb/technicalarticles/imagetragick---imagemagick-remote-code-execution-vulnerability/276262
+
+
+look for .git
+
+
+└─$ feroxbuster -u http://cat.htb -w /home/skid/SecLists/Discovery/Web-Content/common.txt  
+
+
+This command above allowed me to find .git database
+
+http://cat.htb/.git
+
+
+
+there is a 
+accept_cat.php endpoint which we dont have access to. I assume this is what we must figure out how to access
+
+You’re on the right track! Take a look at the user registration file—you’ll find another vulnerability there. The one you just spotted will come in handy in the next step. As for the XSS you mentioned, you’ll find it in that other file. If you need another hint or something more direct, just let me know! And yes, it has to do with the name, but not that parameter.
+
+I believe this is in the input parameter in email where XSS is. or somewhere
+
+
